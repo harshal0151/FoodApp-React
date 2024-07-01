@@ -7,26 +7,27 @@ import { FaBars } from "react-icons/fa";
 
 
 
-function Navbar() {
+function Navbar({setShowLogin}) {
 
   const [menu , setMenu] = useState("home")
+  
 
   return (
     <header>
-      <div className="logo">
+      <Link to="/" className="logo">
         <img src={assets.logo} alt="" />
-      </div>
+      </Link>
       <ul>
         <li className={menu === "home" ? "active" : ""} onClick={() => setMenu("home")}>
           <Link to="/">Home</Link>
         </li>
         
         <li className={menu === "menu" ? "active" : ""} onClick={() => setMenu("menu")}>
-          <Link to="/menu">Menu</Link>
+          <a href="#explore_menu">Menu</a>
         </li>
 
         <li className={menu === "contact-us" ? "active" : ""} onClick={() => setMenu("contact-us")}>
-          <Link to="/contact">Contact US</Link>
+          <a href="#contact-us">Contact US</a>
         </li>
       </ul>
 
@@ -41,7 +42,7 @@ function Navbar() {
           <div className="dot"></div>
         </div>
         <button className="nav_btn ">
-          <CiUser className="icon"/>Sign In</button>
+          <CiUser onClick={()=> setShowLogin(true)} className="icon"/>Sign In</button>
           <FaBars className = "toggle_bar " />
       </div>
     

@@ -10,9 +10,11 @@ function Home() {
 
   return (
     <>
-      <Hero />
+    <div id="home">
+    <Hero />
+    </div>
 
-      <div className="section">
+      <div className="section " id='explore_menu'>
         <div className="title">
           <h3>What's on your mind?</h3>
         </div>

@@ -11,7 +11,7 @@ function ExploreMenu({category , setCategory}) {
 
   return (
     <>
-    <div className='explore_menu'>
+    <div className='explore_menu' >
      
         {menu_list.map((menu, index) => (
           <div className="menu_list" key={index}>

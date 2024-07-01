@@ -3,12 +3,15 @@ import './App.css'
 import Routers from './routers/Routers'
 import Footer from './components/footer/Footer'
 import Navbar  from "./components/nav/Navbar"
+import { useState } from 'react'
+import Login from './components/sign_in/Login'
 
 function App() {
-
+  const [showoLgin , setShowLogin] = useState(false)
   return (
  <>
- <Navbar/>
+ {showoLgin?<Login setShowLogin={setShowLogin}/>: <></>}
+ <Navbar setShowLogin={setShowLogin}/>
     <div className='app'>
     <Routers/>
    </div>

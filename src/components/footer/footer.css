@@ -42,62 +42,61 @@ footer {
   color: tomato;
 }
 
-footer p{
-    line-height: 1.4;
-    color: #49557e;
-  }
+footer p {
+  line-height: 1.4;
+  color: #49557e;
+}
 
-
-  @media (max-width:800px) {
-  .footer_left p{
+@media (max-width: 800px) {
+  .footer_left p {
     font-size: 0.8rem;
     line-height: 1.2;
   }
-  footer li{
+  footer li {
     font-size: 0.8rem;
   }
-  .footer_social{
+  .footer_social {
     font-size: 1.2rem;
   }
-.footer_right   h2{
-  font-size: 1.2rem;
-}
- h2{
-  font-size: 1.2rem;
-}
-.footer_copy-right{
-  font-size: 0.8rem;
-}
-
+  .footer_right h2 {
+    font-size: 1.2rem;
   }
+  h2 {
+    font-size: 1.2rem;
+  }
+  .footer_copy-right {
+    font-size: 0.8rem;
+  }
+}
 
-  @media (max-width:631px){
-   .footer_left, .footer_right{
+@media (max-width: 631px) {
+  .footer_left,
+  .footer_right {
     text-align: center;
     align-items: center;
-   }
-   .footer_content{
+  }
+  .footer_content {
     display: flex;
-    flex-wrap: wrap ;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
-   }
   }
+}
 
-  @media (max-width:330px){
-    .footer_copy-right{
-      font-size: 0.7rem;
-    } 
-    footer li{
-      font-size: 0.7rem;
-    }
-    .footer_social{
-      font-size: 1rem;
-    }
-  .footer_right   h2{
+@media (max-width: 330px) {
+  .footer_copy-right {
+    font-size: 0.7rem;
+  }
+  footer li {
+    font-size: 0.7rem;
+  }
+  .footer_social {
     font-size: 1rem;
   }
-   h2{
+  .footer_right h2 {
     font-size: 1rem;
   }
+  h2 {
+    font-size: 1rem;
   }
+}

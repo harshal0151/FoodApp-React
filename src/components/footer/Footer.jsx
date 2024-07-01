@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <>
-        <footer>
+        <footer id="contact-us">
         <div className="footer_content">
           <div className="footer_left">
             <img src={assets.logo} alt="" />
