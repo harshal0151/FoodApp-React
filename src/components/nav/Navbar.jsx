@@ -41,8 +41,9 @@ function Navbar({setShowLogin}) {
           </Link>
           <div className="dot"></div>
         </div>
-        <button className="nav_btn ">
-          <CiUser onClick={()=> setShowLogin(true)} className="icon"/>Sign In</button>
+        <button className="nav_btn "
+        onClick={()=> setShowLogin(true)} >
+          <CiUser className="icon"/>Sign In</button>
           <FaBars className = "toggle_bar " />
       </div>
     
