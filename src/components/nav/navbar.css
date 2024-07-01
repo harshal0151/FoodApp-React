@@ -128,36 +128,29 @@ header .toggle_bar{
 
 @media (max-width: 400px) {
   header .logo {
-    width: 40px;
+    width: 50px;
   }
 
   header ul {
     display: none;
   }
-  .nav_right  {
+  .nav_right  .icon , .dot {
     display: none;
   }
   header .toggle_bar{
     display: block;
   }
-
-}
-
-@media (max-width:330px) {
-  header .logo {
-    width: 40px;
-  }
-
-  .nav_right , .icon , .dot {
-    display: none;
-  }
-  .toggle_bar{
-    display: block;
-  }
+   
   header .nav_btn {
     padding: 5px 10px;
     font-size: 0.5rem;
   }
+
+}
+
+@media (max-width:330px) {
+ 
+
   
 }
 
