@@ -6,7 +6,7 @@ header {
   padding: 20px 0;
   position: fixed;
   z-index: 99;
-  background:#fff;
+  background: #fff;
   top: 0;
 }
 header .logo {
@@ -39,36 +39,36 @@ header .nav_btn {
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s;
-  display: flex; 
+  display: flex;
   gap: 10px;
 }
 header .active {
-    padding-bottom: 2px;
-    border-bottom: 2px solid tomato;
+  padding-bottom: 2px;
+  border-bottom: 2px solid tomato;
 }
 
-button:hover{
-    background-color: #fff4f2;
+button:hover {
+  background-color: #fff4f2;
 }
 
 .nav_right .icon {
   font-size: 1.2rem;
 }
 
-.nav_right .cart{
-    position: relative;
+.nav_right .cart {
+  position: relative;
 }
 
-.nav_right .dot{
-    position: absolute;
-    min-width: 8px;
-    min-height: 8px;
-    background-color: tomato;
-    border-radius: 5px;
-    top: -8px;
-    right: -8px;
+.nav_right .dot {
+  position: absolute;
+  min-width: 8px;
+  min-height: 8px;
+  background-color: tomato;
+  border-radius: 5px;
+  top: -8px;
+  right: -8px;
 }
-header .toggle_bar{
+header .toggle_bar {
   display: none;
 }
 
@@ -116,35 +116,57 @@ header .toggle_bar{
   header ul {
     display: none;
   }
-  .nav_right  {
+  .nav_right {
     display: none;
   }
-  header .toggle_bar{
+  header .toggle_bar {
     display: block;
   }
 
+  .nav_links.mobile_menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    position: absolute;  
+    width: 100px; 
+    background: #fff;
+    top: 70px;
+    right: 60px;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+   
+  }
 }
 
-
+@media (max-width: 600px) {
+  .nav_links.mobile_menu {
+    top: 60px;
+    right: 40px;
+  }
+}
+@media (max-width: 510px) {
+  .nav_links.mobile_menu {
+    top: 60px;
+    right: 20px;
+  }
+  .nav_right .nav_btn{
+    display: none;
+  }
+}
 @media (max-width: 400px) {
   header .logo {
     width: 50px;
   }
 
-  header ul {
-    display: none;
-  }
-  .nav_right  .icon , .dot {
-    display: none;
-  }
-  header .toggle_bar{
-    display: block;
-  }
-   
   header .nav_btn {
     padding: 5px 10px;
     font-size: 0.5rem;
   }
+  .nav_links.mobile_menu {
+    top: 60px;
+    right: 0px;
+  }
 
 }
-

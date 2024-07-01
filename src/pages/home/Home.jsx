@@ -14,7 +14,7 @@ function Home() {
     <Hero />
     </div>
 
-      <div className="section " id='explore_menu'>
+      <div className="section " >
         <div className="title">
           <h3>What's on your mind?</h3>
         </div>

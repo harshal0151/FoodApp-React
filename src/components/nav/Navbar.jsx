@@ -1,54 +1,58 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "../nav/navbar.css";
 import { Link } from "react-router-dom";
 import { assets } from "../../assets/assets.js";
-import { CiShoppingBasket, CiSearch , CiUser } from "react-icons/ci";
-import { FaBars } from "react-icons/fa";
+import { CiShoppingBasket, CiSearch, CiUser } from "react-icons/ci";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { StoreContext } from "../../Context/StoreCotext.jsx";
 
 
+function Navbar({ setShowLogin }) {
+  const [menu, setMenu] = useState("home");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { cartTotal } = useContext(StoreContext);
 
-function Navbar({setShowLogin}) {
-
-  const [menu , setMenu] = useState("home")
-  
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   return (
     <header>
       <Link to="/" className="logo">
         <img src={assets.logo} alt="" />
       </Link>
-      <ul>
+      <ul className={isMobileMenuOpen ? "nav_links mobile_menu" : "nav_links"}>
         <li className={menu === "home" ? "active" : ""} onClick={() => setMenu("home")}>
-          <Link to="/">Home</Link>
+          <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
         </li>
-        
         <li className={menu === "menu" ? "active" : ""} onClick={() => setMenu("menu")}>
-          <a href="#explore_menu">Menu</a>
+          <Link to="/menu" onClick={() => setIsMobileMenuOpen(false)}>Menu</Link>
         </li>
-
         <li className={menu === "contact-us" ? "active" : ""} onClick={() => setMenu("contact-us")}>
-          <a href="#contact-us">Contact US</a>
+          <a href="#contact-us" onClick={() => setIsMobileMenuOpen(false)}>Contact US</a>
         </li>
+        {/* <button className= "nav_btn_toggle"onClick={() => setShowLogin(true)}>
+          <CiUser className="icon" />Sign In
+        </button> */}
       </ul>
 
-      <div className="nav_right">
-        <Link >
+      <div className= "nav_right">
+        <Link>
           <CiSearch className="icon" />
         </Link>
         <div className="cart">
-          <Link to= "/cart">
+          <Link to="/cart">
             <CiShoppingBasket className="icon" />
           </Link>
-          <div className="dot"></div>
+          <div className={cartTotal() === 0 ? "" : "dot"}></div>
         </div>
-        <button className="nav_btn "
-        onClick={()=> setShowLogin(true)} >
-          <CiUser className="icon"/>Sign In</button>
-          <FaBars className = "toggle_bar " />
+        <button className="nav_btn" onClick={() => setShowLogin(true)}>
+          <CiUser className="icon" />Sign In
+        </button>
+        <div className="toggle_bar" onClick={toggleMobileMenu}>
+          {isMobileMenuOpen ? <FaTimes className="" /> : <FaBars className="" />}
+        </div>
       </div>
-    
-        
-      
     </header>
   );
 }
