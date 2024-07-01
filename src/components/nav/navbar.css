@@ -1,0 +1,165 @@
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+  position: fixed;
+  z-index: 99;
+  background:#fff;
+  top: 0;
+}
+header .logo {
+  width: 100px;
+}
+header .logo img {
+  width: 100%;
+}
+
+header ul {
+  display: flex;
+  gap: 2rem;
+  color: #49557e;
+  font-size: 1rem;
+}
+
+header .nav_right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+header .nav_btn {
+  background: transparent;
+  font-size: 1rem;
+  color: #49557e;
+  border: 1px solid tomato;
+  border-radius: 50px;
+  padding: 10px 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex; 
+  gap: 10px;
+}
+header .active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid tomato;
+}
+
+button:hover{
+    background-color: #fff4f2;
+}
+
+.nav_right .icon {
+  font-size: 1.2rem;
+}
+
+.nav_right .cart{
+    position: relative;
+}
+
+.nav_right .dot{
+    position: absolute;
+    min-width: 8px;
+    min-height: 8px;
+    background-color: tomato;
+    border-radius: 5px;
+    top: -8px;
+    right: -8px;
+}
+header .toggle_bar{
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  header .logo {
+    width: 80px;
+  }
+
+  header ul {
+    font-size: 0.9rem;
+    gap: 1.5rem;
+  }
+  .nav_right .icon {
+    font-size: 1.1rem;
+  }
+  header .nav_btn {
+    padding: 9px 25px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 770px) {
+  header .logo {
+    width: 70px;
+  }
+
+  header ul {
+    font-size: 0.8rem;
+    gap: 1rem;
+  }
+  .nav_right .icon {
+    font-size: 1rem;
+  }
+  header .nav_btn {
+    padding: 8px 20px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 700px) {
+  header .logo {
+    width: 60px;
+  }
+
+  header ul {
+    display: none;
+  }
+  .nav_right  {
+    display: none;
+  }
+  header .toggle_bar{
+    display: block;
+  }
+
+}
+
+
+@media (max-width: 400px) {
+  header .logo {
+    width: 40px;
+  }
+
+  header ul {
+    display: none;
+  }
+  .nav_right  {
+    display: none;
+  }
+  header .toggle_bar{
+    display: block;
+  }
+
+}
+
+@media (max-width:330px) {
+  header .logo {
+    width: 40px;
+  }
+
+  .nav_right , .icon , .dot {
+    display: none;
+  }
+  .toggle_bar{
+    display: block;
+  }
+  header .nav_btn {
+    padding: 5px 10px;
+    font-size: 0.5rem;
+  }
+  
+}
+
+
+  
