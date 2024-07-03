@@ -87,6 +87,7 @@
   gap: 1rem;
   justify-content: center;
   margin-top: 1rem;
+  
 }
 
 .cart_btn:hover {
@@ -251,5 +252,8 @@
   .cart_table th,
   .cart_table td {
     padding: 8px;
+  }
+  .cart_total_promo{
+    width: 100%;
   }
 }

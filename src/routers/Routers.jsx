@@ -4,9 +4,10 @@ import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Home from "../pages/home/Home"
 import Cart from "../pages/cart/Cart"
-// import PlaceOrder from '../pages/placeOrder/PlaceOrder'
-import Contact from '../pages/contact-us/Contact'
+import Order from '../pages/placeOrder/Order'
 import Menu from '../pages/menu/Menu'
+import SinglePage from '../components/singlei_tem/SinglePage'
+import OrderConfirmation from '../pages/placeOrder/OrderConfirmation'
 
 
 
@@ -16,9 +17,12 @@ function Routers() {
     <>
     <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/singleItem/:id" element={<SinglePage />} />
         <Route path="/menu" element={<Menu />} />
-        <Route path="/contact" element={<Contact />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/placeOrder" element={<Order />} />
+        <Route path="/orderConfirmation" element={<OrderConfirmation />} />
+        
     </Routes>
     
     </>

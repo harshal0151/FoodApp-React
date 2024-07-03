@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import "../nav/navbar.css";
 import { Link } from "react-router-dom";
-import { assets } from "../../assets/assets.js";
+import logo from "../../assets/scooter.gif"
 import { CiShoppingBasket, CiSearch, CiUser } from "react-icons/ci";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { StoreContext } from "../../Context/StoreCotext.jsx";
@@ -18,9 +18,13 @@ function Navbar({ setShowLogin }) {
 
   return (
     <header>
-      <Link to="/" className="logo">
-        <img src={assets.logo} alt="" />
+    
+     <Link to="/" className="logo">
+     <h2>Food.com</h2>
+      
+        
       </Link>
+     
       <ul className={isMobileMenuOpen ? "nav_links mobile_menu" : "nav_links"}>
         <li className={menu === "home" ? "active" : ""} onClick={() => setMenu("home")}>
           <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>

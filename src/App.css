@@ -72,6 +72,9 @@ hr {
   height: 50vh;
  background-size: cover;
 }
+button{
+  cursor: pointer;
+}
 @keyframes fadeIn {
   0% {
     opacity: 0;

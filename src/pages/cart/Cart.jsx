@@ -1,18 +1,24 @@
-import React, { useContext } from "react";
+import React, { useContext , useEffect } from "react";
 import "../cart/cart.css";
 import {StoreContext} from "../../Context/StoreCotext"
 import { CiTrash } from "react-icons/ci";
 import { FaCircleMinus } from "react-icons/fa6";
 import { IoAddCircleSharp } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 
 
 function Cart() {
-  const { food_list, cartItem, setCartItem, removeFromItem, addTocart, cartTotal } = useContext(StoreContext);
-  console.log(cartItem);
+  const { food_list, cartItem, removeFromItem, addTocart, cartTotal } = useContext(StoreContext);
+  // console.log(cartItem);
+
+  const navigate = useNavigate()
+
+  useEffect(()=>{
+    window.scroll(0,0)
+},[])
 
   // Check if the cart is empty
   const isCartEmpty = !food_list.some(item => cartItem[item._id] > 0);
-
   if (isCartEmpty) {
     return <div className="empty_cart_message">Your cart is empty!</div>;
   }
@@ -80,7 +86,7 @@ function Cart() {
               <p>Total</p>
               <p>₹ {cartTotal() * 8 + 20}/-</p>
             </div>
-            <button className="cart_btn">Proceed To Checkout</button>
+            <button onClick={(()=>navigate("/placeOrder"))} className="cart_btn">Proceed To Checkout</button>
           </div>
 
           <div className="cart_total_promo">

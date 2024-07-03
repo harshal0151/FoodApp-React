@@ -35,7 +35,7 @@ function FoodItem({ id, name, description, price, image, rating }) {
         </div>
         <div className="food_card_contend">
           <div className="food_card_name">
-            <Link>
+            <Link to={`/singleItem/${id}`}>
               <h3>{name}</h3>{" "}
             </Link>
             <span>

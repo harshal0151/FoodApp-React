@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState ,useEffect } from 'react'
 import ExploreMenu from '../../components/exploreMenu/ExploreMenu'
 import FoodDisplay from '../../components/food_display/FoodDisplay';
 
@@ -6,7 +6,12 @@ import FoodDisplay from '../../components/food_display/FoodDisplay';
 
 
 function Menu() {
+
     const [category , setCategory] = useState("All");
+
+    useEffect(()=>{
+      window.scroll(0,0)
+  },[])
   return (
     <>
     <div className='menu_banner'>

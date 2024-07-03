@@ -1,5 +1,4 @@
 
-import { assets } from "../../assets/assets";
 import { FaLinkedinIn,FaGithub,FaInstagram } from "react-icons/fa";
 import "../footer/footer.css"
 import { Link } from "react-router-dom";
@@ -10,7 +9,7 @@ function Footer() {
         <footer id="contact-us">
         <div className="footer_content">
           <div className="footer_left">
-            <img src={assets.logo} alt="" />
+            <h2>Food.com</h2>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae
               illo facilis nesciunt ad autem ea quibusdam totam. Fugit,

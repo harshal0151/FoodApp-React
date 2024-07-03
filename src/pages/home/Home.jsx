@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect } from "react";
 import Hero from "../../components/header/Hero";
 import "../../components/header/hero.css";
 import ExploreMenu from "../../components/exploreMenu/ExploreMenu";
@@ -7,6 +7,10 @@ import Noodle from "../../assets/noodle.gif"
 
 function Home() {
   const [category , setCategory] = useState("All");
+
+  useEffect(()=>{
+    window.scroll(0,0)
+},[])
 
   return (
     <>

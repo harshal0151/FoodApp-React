@@ -122,288 +122,241 @@ export const menu_list = [
             name: "Greek salad",
             image: food_1,
             price: 12,
-            description: "Food provides essential nutrients for overall health and well-being",
+            description: "Food provides essential nutrients for overall health and well-being.",
+            description2: "This Greek salad is a healthy and tasty mix of fresh vegetables and feta cheese, offering a delightful combination of flavors and textures. Perfect for a light lunch or as a side dish.",
             category: "Salad",
-            rating: 4.5
+            rating: 4.5,
+            ingredients: ["Tomatoes", "Cucumbers", "Olives", "Feta cheese", "Red onions", "Olive oil"],
+            home_recipe: "Chop the tomatoes, cucumbers, and red onions. Mix them with olives and feta cheese. Drizzle with olive oil and season with salt and pepper. Toss well and serve chilled."
         },
         {
             _id: "2",
             name: "Veg salad",
             image: food_2,
             price: 18,
-            description: "Food provides essential nutrients for overall health and well-being",
+            description: "Food provides essential nutrients for overall health and well-being.",
+            description2: "A colorful and nutrient-rich salad with a variety of fresh vegetables, perfect for a healthy and satisfying meal. This salad is packed with vitamins and minerals.",
             category: "Salad",
-            rating: 4.0
+            rating: 4.0,
+            ingredients: ["Lettuce", "Tomatoes", "Cucumbers", "Carrots", "Bell peppers", "Vinaigrette"],
+            home_recipe: "Chop the lettuce, tomatoes, cucumbers, carrots, and bell peppers. Mix them in a bowl. Drizzle with vinaigrette and toss well. Serve immediately."
         },
         {
             _id: "3",
             name: "Clover Salad",
             image: food_3,
             price: 16,
-            description: "Food provides essential nutrients for overall health and well-being",
+            description: "Food provides essential nutrients for overall health and well-being.",
+            description2: "A delightful mix of greens, clover sprouts, and a tangy dressing. This salad is both refreshing and nutritious, making it a great choice for a healthy diet.",
             category: "Salad",
-            rating: 4.2
+            rating: 4.2,
+            ingredients: ["Mixed greens", "Clover sprouts", "Avocado", "Cherry tomatoes", "Lemon dressing"],
+            home_recipe: "Combine mixed greens and clover sprouts in a bowl. Add sliced avocado and halved cherry tomatoes. Drizzle with lemon dressing and toss gently. Serve chilled."
         },
         {
             _id: "4",
             name: "Chicken Salad",
             image: food_4,
             price: 24,
-            description: "Food provides essential nutrients for overall health and well-being",
+            description: "Food provides essential nutrients for overall health and well-being.",
+            description2: "A protein-packed salad with grilled chicken, fresh vegetables, and a light dressing. This salad is perfect for those looking to add a bit more protein to their diet.",
             category: "Salad",
-            rating: 4.7
+            rating: 4.7,
+            ingredients: ["Grilled chicken", "Lettuce", "Tomatoes", "Cucumbers", "Ranch dressing"],
+            home_recipe: "Grill the chicken and slice it into strips. Chop the lettuce, tomatoes, and cucumbers. Mix the vegetables in a bowl, add the chicken strips, and drizzle with ranch dressing. Toss and serve."
         },
         {
             _id: "5",
             name: "Lasagna Rolls",
             image: food_5,
             price: 14,
-            description: "Food provides essential nutrients for overall health and well-being",
+            description: "Food provides essential nutrients for overall health and well-being.",
+            description2: "Delicious lasagna rolled up with ricotta cheese and marinara sauce. These rolls are a fun twist on traditional lasagna, perfect for a cozy family dinner.",
             category: "Rolls",
-            rating: 4.3
+            rating: 4.3,
+            ingredients: ["Lasagna noodles", "Ricotta cheese", "Marinara sauce", "Parmesan cheese"],
+            home_recipe: "Cook the lasagna noodles according to the package instructions. Spread ricotta cheese on each noodle, roll them up, and place in a baking dish. Cover with marinara sauce and sprinkle with Parmesan cheese. Bake at 375°F for 20 minutes."
         },
         {
             _id: "6",
             name: "Peri Peri Rolls",
             image: food_6,
             price: 12,
-            description: "Food provides essential nutrients for overall health and well-being",
+            description: "Food provides essential nutrients for overall health and well-being.",
+            description2: "Spicy and flavorful rolls with peri peri chicken and fresh vegetables. These rolls are perfect for those who love a bit of heat in their meals.",
             category: "Rolls",
-            rating: 4.1
+            rating: 4.1,
+            ingredients: ["Chicken", "Peri peri sauce", "Bell peppers", "Onions", "Tortilla wraps"],
+            home_recipe: "Cook the chicken with peri peri sauce. Slice the bell peppers and onions. Warm the tortilla wraps and fill them with chicken, bell peppers, and onions. Roll up the tortillas and serve."
         },
         {
             _id: "7",
             name: "Chicken Rolls",
             image: food_7,
             price: 20,
-            description: "Food provides essential nutrients for overall health and well-being",
+            description: "Food provides essential nutrients for overall health and well-being.",
+            description2: "Tender chicken rolls with a mix of spices and fresh vegetables. These rolls are both satisfying and delicious, making them a great choice for any meal.",
             category: "Rolls",
-            rating: 4.6
+            rating: 4.6,
+            ingredients: ["Chicken", "Spices", "Lettuce", "Tomatoes", "Tortilla wraps"],
+            home_recipe: "Season and cook the chicken with your favorite spices. Slice the lettuce and tomatoes. Warm the tortilla wraps and fill them with chicken, lettuce, and tomatoes. Roll up the tortillas and serve."
         },
         {
             _id: "8",
             name: "Veg Rolls",
             image: food_8,
             price: 15,
-            description: "Food provides essential nutrients for overall health and well-being",
+            description: "Food provides essential nutrients for overall health and well-being.",
+            description2: "A healthy and tasty roll filled with a variety of fresh vegetables. These rolls are perfect for a light lunch or a nutritious snack.",
             category: "Rolls",
-            rating: 4.2
+            rating: 4.2,
+            ingredients: ["Lettuce", "Carrots", "Bell peppers", "Cucumbers", "Tortilla wraps"],
+            home_recipe: "Slice the lettuce, carrots, bell peppers, and cucumbers. Warm the tortilla wraps and fill them with the vegetables. Roll up the tortillas and serve."
         },
         {
             _id: "9",
             name: "Ripple Ice Cream",
             image: food_9,
             price: 14,
-            description: "Food provides essential nutrients for overall health and well-being",
+            description: "Food provides essential nutrients for overall health and well-being.",
+            description2: "Creamy ice cream with delicious ripple swirls. This ice cream is a perfect treat for any occasion, offering a delightful combination of flavors.",
             category: "Deserts",
-            rating: 4.4
+            rating: 4.4,
+            ingredients: ["Cream", "Sugar", "Vanilla", "Ripple sauce"],
+            home_recipe: "Mix cream, sugar, and vanilla in a bowl. Pour the mixture into an ice cream maker and churn until thick. Add ripple sauce and swirl it in. Freeze for a few hours before serving."
         },
         {
             _id: "10",
             name: "Fruit Ice Cream",
             image: food_10,
             price: 22,
-            description: "Food provides essential nutrients for overall health and well-being",
+            description: "Food provides essential nutrients for overall health and well-being.",
+            description2: "A refreshing ice cream made with real fruits. This ice cream is both delicious and nutritious, perfect for a hot summer day.",
             category: "Deserts",
-            rating: 4.5
+            rating: 4.5,
+            ingredients: ["Cream", "Sugar", "Mixed fruits", "Vanilla"],
+            home_recipe: "Blend mixed fruits into a puree. Mix the puree with cream, sugar, and vanilla. Pour the mixture into an ice cream maker and churn until thick. Freeze for a few hours before serving."
         },
         {
             _id: "11",
             name: "Jar Ice Cream",
             image: food_11,
             price: 10,
-            description: "Food provides essential nutrients for overall health and well-being",
+            description: "Food provides essential nutrients for overall health and well-being.",
+            description2: "Convenient and tasty ice cream in a jar. This ice cream is perfect for a quick treat, offering a rich and creamy flavor.",
             category: "Deserts",
-            rating: 4.0
+            rating: 4.0,
+            ingredients: ["Cream", "Sugar", "Vanilla", "Chocolate chips"],
+            home_recipe: "Mix cream, sugar, and vanilla in a bowl. Pour the mixture into small jars and add chocolate chips. Freeze for a few hours before serving."
         },
         {
             _id: "12",
             name: "Vanilla Ice Cream",
             image: food_12,
             price: 12,
-            description: "Food provides essential nutrients for overall health and well-being",
+            description: "Food provides essential nutrients for overall health and well-being.",
+            description2: "Classic vanilla ice cream, rich and creamy. This ice cream is a timeless favorite, perfect for any dessert.",
             category: "Deserts",
-            rating: 4.1
+            rating: 4.1,
+            ingredients: ["Cream", "Sugar", "Vanilla"],
+            home_recipe: "Mix cream, sugar, and vanilla in a bowl. Pour the mixture into an ice cream maker and churn until thick. Freeze for a few hours before serving."
         },
         {
             _id: "13",
             name: "Chicken Sandwich",
             image: food_13,
             price: 12,
-            description: "Food provides essential nutrients for overall health and well-being",
+            description: "Food provides essential nutrients for overall health and well-being.",
+            description2: "A hearty sandwich with grilled chicken and fresh veggies. This sandwich is both filling and flavorful, perfect for lunch or dinner.",
             category: "Sandwich",
-            rating: 4.3
+            rating: 4.3,
+            ingredients: ["Grilled chicken", "Lettuce", "Tomatoes", "Mayonnaise", "Bread"],
+            home_recipe: "Grill the chicken and slice it. Toast the bread and spread mayonnaise on each slice. Add lettuce, tomatoes, and grilled chicken. Assemble the sandwich and serve."
         },
         {
             _id: "14",
             name: "Vegan Sandwich",
             image: food_14,
             price: 18,
-            description: "Food provides essential nutrients for overall health and well-being",
+            description: "Food provides essential nutrients for overall health and well-being.",
+            description2: "A delicious sandwich with vegan-friendly ingredients. This sandwich is perfect for those following a plant-based diet.",
             category: "Sandwich",
-            rating: 4.2
+            rating: 4.2,
+            ingredients: ["Vegan cheese", "Lettuce", "Tomatoes", "Cucumbers", "Bread"],
+            home_recipe: "Toast the bread and spread vegan cheese on each slice. Add lettuce, tomatoes, and cucumbers. Assemble the sandwich and serve."
         },
         {
             _id: "15",
             name: "Grilled Sandwich",
             image: food_15,
             price: 16,
-            description: "Food provides essential nutrients for overall health and well-being",
+            description: "Food provides essential nutrients for overall health and well-being.",
+            description2: "A tasty sandwich with a variety of grilled ingredients. This sandwich is perfect for a quick and satisfying meal.",
             category: "Sandwich",
-            rating: 4.4
+            rating: 4.4,
+            ingredients: ["Grilled vegetables", "Cheese", "Bread"],
+            home_recipe: "Grill the vegetables and set them aside. Toast the bread and spread cheese on each slice. Add the grilled vegetables. Assemble the sandwich and serve."
         },
         {
             _id: "16",
             name: "Bread Sandwich",
             image: food_16,
             price: 24,
-            description: "Food provides essential nutrients for overall health and well-being",
+            description: "Food provides essential nutrients for overall health and well-being.",
+            description2: "A simple yet satisfying sandwich with fresh ingredients. This sandwich is perfect for a quick snack or a light meal.",
             category: "Sandwich",
-            rating: 4.5
+            rating: 4.5,
+            ingredients: ["Bread", "Cheese", "Tomatoes", "Lettuce"],
+            home_recipe: "Toast the bread and spread cheese on each slice. Add sliced tomatoes and lettuce. Assemble the sandwich and serve."
         },
         {
             _id: "17",
             name: "Cup Cake",
             image: food_17,
             price: 14,
-            description: "Food provides essential nutrients for overall health and well-being",
+            description: "Food provides essential nutrients for overall health and well-being.",
+            description2: "Delicious and fluffy cupcake with rich frosting. These cupcakes are perfect for any celebration, offering a delightful and sweet treat.",
             category: "Cake",
-            rating: 4.6
+            rating: 4.6,
+            ingredients: ["Flour", "Sugar", "Butter", "Eggs", "Vanilla", "Frosting"],
+            home_recipe: "Mix flour, sugar, butter, eggs, and vanilla in a bowl. Pour the batter into cupcake liners and bake at 350°F for 20 minutes. Let them cool and frost with your favorite frosting."
         },
         {
             _id: "18",
             name: "Vegan Cake",
             image: food_18,
             price: 12,
-            description: "Food provides essential nutrients for overall health and well-being",
+            description: "Food provides essential nutrients for overall health and well-being.",
+            description2: "A delightful vegan cake made with plant-based ingredients. This cake is perfect for those following a vegan diet, offering a rich and satisfying flavor.",
             category: "Cake",
-            rating: 4.2
+            rating: 4.2,
+            ingredients: ["Flour", "Sugar", "Vegan butter", "Plant-based milk", "Vanilla"],
+            home_recipe: "Mix flour, sugar, vegan butter, plant-based milk, and vanilla in a bowl. Pour the batter into a cake pan and bake at 350°F for 30 minutes. Let it cool before serving."
         },
         {
             _id: "19",
             name: "Butterscotch Cake",
             image: food_19,
             price: 20,
-            description: "Food provides essential nutrients for overall health and well-being",
+            description: "Food provides essential nutrients for overall health and well-being.",
+            description2: "A rich and creamy butterscotch-flavored cake. This cake is perfect for any occasion, offering a delightful and sweet treat.",
             category: "Cake",
-            rating: 4.5
+            rating: 4.5,
+            ingredients: ["Flour", "Sugar", "Butter", "Eggs", "Butterscotch flavor"],
+            home_recipe: "Mix flour, sugar, butter, eggs, and butterscotch flavor in a bowl. Pour the batter into a cake pan and bake at 350°F for 30 minutes. Let it cool before serving."
         },
         {
             _id: "20",
             name: "Sliced Cake",
             image: food_20,
             price: 15,
-            description: "Food provides essential nutrients for overall health and well-being",
+            description: "Food provides essential nutrients for overall health and well-being.",
+            description2: "A delicious cake sliced into perfect portions. This cake is great for parties or gatherings, offering a rich and satisfying flavor.",
             category: "Cake",
-            rating: 4.3
-        },
-        {
-            _id: "21",
-            name: "Garlic Mushroom",
-            image: food_21,
-            price: 14,
-            description: "Food provides essential nutrients for overall health and well-being",
-            category: "Pure Veg",
-            rating: 4.2
-        },
-        {
-            _id: "22",
-            name: "Fried Cauliflower",
-            image: food_22,
-            price: 22,
-            description: "Food provides essential nutrients for overall health and well-being",
-            category: "Pure Veg",
-            rating: 4.3
-        },
-        {
-            _id: "23",
-            name: "Mix Veg Pulao",
-            image: food_23,
-            price: 10,
-            description: "Food provides essential nutrients for overall health and well-being",
-            category: "Pure Veg",
-            rating: 4.1
-        },
-        {
-            _id: "24",
-            name: "Rice Zucchini",
-            image: food_24,
-            price: 12,
-            description: "Food provides essential nutrients for overall health and well-being",
-            category: "Pure Veg",
-            rating: 4.0
-        },
-        {
-            _id: "25",
-            name: "Cheese Pasta",
-            image: food_25,
-            price: 12,
-            description: "Food provides essential nutrients for overall health and well-being",
-            category: "Pasta",
-            rating: 4.3
-        },
-        {
-            _id: "26",
-            name: "Tomato Pasta",
-            image: food_26,
-            price: 18,
-            description: "Food provides essential nutrients for overall health and well-being",
-            category: "Pasta",
-            rating: 4.4
-        },
-        {
-            _id: "27",
-            name: "Creamy Pasta",
-            image: food_27,
-            price: 16,
-            description: "Food provides essential nutrients for overall health and well-being",
-            category: "Pasta",
-            rating: 4.5
-        },
-        {
-            _id: "28",
-            name: "Chicken Pasta",
-            image: food_28,
-            price: 24,
-            description: "Food provides essential nutrients for overall health and well-being",
-            category: "Pasta",
-            rating: 4.6
-        },
-        {
-            _id: "29",
-            name: "Butter Noodles",
-            image: food_29,
-            price: 14,
-            description: "Food provides essential nutrients for overall health and well-being",
-            category: "Noodles",
-            rating: 4.1
-        },
-        {
-            _id: "30",
-            name: "Veg Noodles",
-            image: food_30,
-            price: 12,
-            description: "Food provides essential nutrients for overall health and well-being",
-            category: "Noodles",
-            rating: 4.0
-        },
-        {
-            _id: "31",
-            name: "Somen Noodles",
-            image: food_31,
-            price: 20,
-            description: "Food provides essential nutrients for overall health and well-being",
-            category: "Noodles",
-            rating: 4.3
-        },
-        {
-            _id: "32",
-            name: "Cooked Noodles",
-            image: food_32,
-            price: 15,
-            description: "Food provides essential nutrients for overall health and well-being",
-            category: "Noodles",
-            rating: 4.2
+            rating: 4.3,
+            ingredients: ["Flour", "Sugar", "Butter", "Eggs"],
+            home_recipe: "Mix flour, sugar, butter, and eggs in a bowl. Pour the batter into a cake pan and bake at 350°F for 30 minutes. Let it cool and slice into portions before serving."
         }
     ];
+    
     
