@@ -62,10 +62,13 @@ function Navbar({ setShowLogin }) {
           <div className={cartTotal() === 0 ? "" : "dot"}></div>
         </div>
         {user ? (
-          <div className="user_info">
-            <span className="username">{user.displayName}</span>
-            <button className="nav_btn" onClick={handleLogout}>
-              <CiUser className="icon" /> Logout
+          <div className="user_info" >
+           
+            <button className="nav_btn" >
+              <CiUser className="icon" />  <span className="username">{user.displayName}</span>
+            </button>
+            <button className=" logout" onClick={handleLogout}>
+             Logout
             </button>
           </div>
         ) : (

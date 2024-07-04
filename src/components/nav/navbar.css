@@ -79,7 +79,7 @@ header .toggle_bar {
   align-items: center;
   gap: 1rem;
 }
-.logout{
+ .logout{
   background: #000;
   color: #fff;
   padding: 10px 15px;
@@ -169,6 +169,12 @@ header .toggle_bar {
   }
   .nav_right .nav_btn{
     display: none;
+  }
+  .logout{
+    display: none;
+  }
+  header .nav_right{
+    gap: 1.5rem;
   }
 }
 @media (max-width: 400px) {
