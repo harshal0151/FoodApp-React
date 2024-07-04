@@ -1,30 +1,44 @@
-import React, { useContext, useState } from "react";
-import "../nav/navbar.css";
+import React, { useContext, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/scooter.gif"
 import { CiShoppingBasket, CiSearch, CiUser } from "react-icons/ci";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { StoreContext } from "../../Context/StoreCotext.jsx";
-
+import { signOut, onAuthStateChanged } from "firebase/auth";
+import "../nav/navbar.css";
+import { auth } from "../../firebase";
+import { StoreContext } from "../../Context/StoreCotext";
+ 
 
 function Navbar({ setShowLogin }) {
   const [menu, setMenu] = useState("home");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { cartTotal } = useContext(StoreContext);
+  const { user, setUser, cartTotal } = useContext(StoreContext);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+    return () => unsubscribe();
+  }, [setUser]);
+
+  async function handleLogout() {
+    try {
+      await signOut(auth);
+      setUser(null);
+    } catch (error) {
+      console.error("Error logging out: ", error);
+    }
+  }
+
   return (
     <header>
-    
-     <Link to="/" className="logo">
-     <h2>Food.com</h2>
-      
-        
+      <Link to="/" className="logo">
+        <h2>Food.com</h2>
       </Link>
-     
+
       <ul className={isMobileMenuOpen ? "nav_links mobile_menu" : "nav_links"}>
         <li className={menu === "home" ? "active" : ""} onClick={() => setMenu("home")}>
           <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
@@ -33,14 +47,11 @@ function Navbar({ setShowLogin }) {
           <Link to="/menu" onClick={() => setIsMobileMenuOpen(false)}>Menu</Link>
         </li>
         <li className={menu === "contact-us" ? "active" : ""} onClick={() => setMenu("contact-us")}>
-          <a href="#contact-us" onClick={() => setIsMobileMenuOpen(false)}>Contact US</a>
+          <a href="#contact-us" onClick={() => setIsMobileMenuOpen(false)}>Contact Us</a>
         </li>
-        {/* <button className= "nav_btn_toggle"onClick={() => setShowLogin(true)}>
-          <CiUser className="icon" />Sign In
-        </button> */}
       </ul>
 
-      <div className= "nav_right">
+      <div className="nav_right">
         <Link>
           <CiSearch className="icon" />
         </Link>
@@ -50,11 +61,20 @@ function Navbar({ setShowLogin }) {
           </Link>
           <div className={cartTotal() === 0 ? "" : "dot"}></div>
         </div>
-        <button className="nav_btn" onClick={() => setShowLogin(true)}>
-          <CiUser className="icon" />Sign In
-        </button>
+        {user ? (
+          <div className="user_info">
+            <span className="username">{user.displayName}</span>
+            <button className="nav_btn" onClick={handleLogout}>
+              <CiUser className="icon" /> Logout
+            </button>
+          </div>
+        ) : (
+          <button className="nav_btn" onClick={() => setShowLogin(true)}>
+            <CiUser className="icon" /> Sign In
+          </button>
+        )}
         <div className="toggle_bar" onClick={toggleMobileMenu}>
-          {isMobileMenuOpen ? <FaTimes className="" /> : <FaBars className="" />}
+          {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
         </div>
       </div>
     </header>

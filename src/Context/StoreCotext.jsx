@@ -1,10 +1,21 @@
 import { createContext, useEffect, useReducer, useState } from "react";
 import { food_list } from "../assets/assets";
+import { auth } from "../firebase";
+import { onAuthStateChanged, signOut } from "firebase/auth";
 
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
   const [cartItem, setCartItem] = useState({});
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setUser(user);
+    });
+
+    return () => unsubscribe();
+  }, []);
 
   //cart
   const addTocart = (itemId) => {
@@ -39,6 +50,7 @@ const StoreContextProvider = (props) => {
     addTocart,
     removeFromItem,
     cartTotal,
+    user
   };
   // console.log(food_list);
   return (

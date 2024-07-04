@@ -1,12 +1,12 @@
 import React, { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { IoMdArrowBack } from "react-icons/io";
-import { StoreContext } from "../../Context/StoreCotext";
 import "../placeOrder/place_order.css";
 import money from "../../assets/money.gif";
+import { StoreContext } from "../../Context/StoreCotext";
 
 function Order() {
-  const { cartTotal } = useContext(StoreContext);
+  const { cartTotal, user } = useContext(StoreContext);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -29,124 +29,126 @@ function Order() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Navigate to the order confirmation page
-    navigate("/orderConfirmation", { state: { formData, cartTotal: cartTotal() } });
+    if (user) {
+      // Navigate to the order confirmation page
+      navigate("/orderConfirmation", { state: { formData, cartTotal: cartTotal() } });
+    } else {
+      alert("Please log in to proceed to payment.");
+    }
   };
 
   return (
-    <>
-      <div className="order_container">
-        <div className="delivery_info">
-          <h3>Delivery Information</h3>
-          <form onSubmit={handleSubmit}>
-            <div className="input_flex">
-              <input
-                type="text"
-                name="firstName"
-                placeholder="First name"
-                value={formData.firstName}
-                onChange={handleChange}
-                required
-              />
-              <input
-                type="text"
-                name="lastName"
-                placeholder="Last name"
-                value={formData.lastName}
-                onChange={handleChange}
-                required
-              />
-            </div>
+    <div className="order_container">
+      <div className="delivery_info">
+        <h3>Delivery Information</h3>
+        <form onSubmit={handleSubmit}>
+          <div className="input_flex">
             <input
-              type="email"
-              name="email"
-              placeholder="Email address"
-              value={formData.email}
+              type="text"
+              name="firstName"
+              placeholder="First name"
+              value={formData.firstName}
               onChange={handleChange}
               required
             />
             <input
               type="text"
-              name="street"
-              placeholder="Street"
-              value={formData.street}
-              onChange={handleChange}
-            />
-            <div className="input_flex">
-              <input
-                type="text"
-                name="city"
-                placeholder="City"
-                value={formData.city}
-                onChange={handleChange}
-                required
-              />
-              <input
-                type="text"
-                name="state"
-                placeholder="State"
-                value={formData.state}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <div className="input_flex">
-              <input
-                type="text"
-                name="zipCode"
-                placeholder="Zip code"
-                value={formData.zipCode}
-                onChange={handleChange}
-                required
-              />
-              <input
-                type="text"
-                name="country"
-                placeholder="Country"
-                value={formData.country}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <input
-              type="number"
-              name="phoneNumber"
-              placeholder="Phone number"
-              value={formData.phoneNumber}
+              name="lastName"
+              placeholder="Last name"
+              value={formData.lastName}
               onChange={handleChange}
               required
             />
-            <button type="submit" className="cart_btn">
-              Proceed To Payment <img src={money} alt="Proceed to Payment" />
-            </button>
-          </form>
-          <Link to="/cart">
-            <button className="back_btn">
-              <IoMdArrowBack />
-              Back To Cart
-            </button>
-          </Link>
-        </div>
+          </div>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email address"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="text"
+            name="street"
+            placeholder="Street"
+            value={formData.street}
+            onChange={handleChange}
+          />
+          <div className="input_flex">
+            <input
+              type="text"
+              name="city"
+              placeholder="City"
+              value={formData.city}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="text"
+              name="state"
+              placeholder="State"
+              value={formData.state}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="input_flex">
+            <input
+              type="text"
+              name="zipCode"
+              placeholder="Zip code"
+              value={formData.zipCode}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="text"
+              name="country"
+              placeholder="Country"
+              value={formData.country}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <input
+            type="number"
+            name="phoneNumber"
+            placeholder="Phone number"
+            value={formData.phoneNumber}
+            onChange={handleChange}
+            required
+          />
+          <button type="submit" className="cart_btn">
+            Proceed To Payment <img src={money} alt="Proceed to Payment" />
+          </button>
+        </form>
+        <Link to="/cart">
+          <button className="back_btn">
+            <IoMdArrowBack />
+            Back To Cart
+          </button>
+        </Link>
+      </div>
 
-        <div>
-          <h3>Payment Information</h3>
-          <div className="order_totle">
-            <div className="cart_total_details">
-              <p>Subtotal</p>
-              <p>₹ {cartTotal() * 8}</p>
-            </div>
-            <div className="cart_total_details">
-              <p>Delivery</p>
-              <p>₹ 20</p>
-            </div>
-            <div className="cart_total_details total">
-              <p>Total</p>
-              <p>₹ {cartTotal() * 8 + 20}/-</p>
-            </div>
+      <div>
+        <h3>Payment Information</h3>
+        <div className="order_total">
+          <div className="total_details">
+            <h2>Subtotal</h2>
+            <p>₹ {cartTotal() * 8}</p>
+          </div>
+          <div className="total_details">
+            <h2>Delivery</h2>
+            <p>₹ 20</p>
+          </div>
+          <div className="total_details total">
+            <h2>Total</h2>
+            <p>₹ {cartTotal() * 8 + 20}</p>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

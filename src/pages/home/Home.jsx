@@ -4,6 +4,7 @@ import "../../components/header/hero.css";
 import ExploreMenu from "../../components/exploreMenu/ExploreMenu";
 import FoodDisplay from "../../components/food_display/FoodDisplay";
 import Noodle from "../../assets/noodle.gif"
+// import Search from "../../components/search/Search";
 
 function Home() {
   const [category , setCategory] = useState("All");
@@ -26,6 +27,7 @@ function Home() {
       </div>
       <hr />
 
+      {/* <Search/> */}
       <div className="section">
       <div className="title">
           <h3>Top dishes near you</h3>
