@@ -8,6 +8,7 @@
   width: 100%;
   margin-bottom: 15rem;
   gap: 1rem;
+  animation: fadeIn 3s;
 }
 
 .ai_title {

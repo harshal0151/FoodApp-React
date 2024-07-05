@@ -35,6 +35,7 @@ function Home() {
         <button className="AIbtn">Food AI <img src={ai} alt="" /></button>
         </Link>
       </div>
+      
       <div className="section ">
         <div className="title">
           <h3>What's on your mind?</h3>

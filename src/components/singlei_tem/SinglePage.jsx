@@ -1,8 +1,10 @@
 import React, { useContext, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { StoreContext } from "../../Context/StoreCotext";
 import Ratting from "../../assets/ratting.png";
 import "./../singlei_tem/single_page.css";
+import ai from "../../assets/ai.png"
+
 
 function SinglePage() {
   const { id } = useParams();
@@ -43,6 +45,7 @@ function SinglePage() {
       </div>
 
       <div className="single_bottom">
+
         <div className="recipe">
           <h2>Recipe</h2>
           <p>{food.home_recipe}</p>
@@ -56,7 +59,25 @@ function SinglePage() {
             })}
           </ul>
         </div>
+
+        <div className="ai_home">
+        <div className="title">
+          <h3>Get A Smart Recipe Suggestions</h3>
+        </div>
+        <p>
+          Experience personalized recipe suggestions tailored to your
+          preferences with our AI-powered recipe generator. Simply input a food
+          category or dish, and receive detailed, healthy recipe ideas complete
+          with ingredients, step-by-step instructions, and calorie counts per
+          serving. Explore nutritious meal options effortlessly!
+        </p>
+        <Link to="/foodAi">
+        <button className="AIbtn">Food AI <img src={ai} alt="" /></button>
+        </Link>
       </div>
+      </div>
+      
+   
     </>
   );
 }

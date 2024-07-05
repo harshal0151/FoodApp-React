@@ -1,5 +1,6 @@
 
 import { FaLinkedinIn,FaGithub,FaInstagram } from "react-icons/fa";
+import { ImProfile } from "react-icons/im";
 import "../footer/footer.css"
 import { Link } from "react-router-dom";
 
@@ -16,9 +17,9 @@ function Footer() {
               voluptatem fugiat?
             </p>
             <div className="footer_social">
-             <Link> <FaGithub/></Link>
-              <Link><FaLinkedinIn/></Link>
-              <Link><FaInstagram/></Link>
+             <Link to="https://github.com/harshal0151/FoodBookingAI-Recipes-Generator"> <FaGithub/></Link>
+              <Link to= "https://www.linkedin.com/in/harshal-patil-187a87245/"><FaLinkedinIn/></Link>
+              <Link to= "https://portfolio-harshal-jldur6pn7-harshal0151s-projects.vercel.app/" ><ImProfile/></Link>
             </div>
           </div>
           <div className="footer_center">

@@ -1,5 +1,6 @@
 import React from "react";
 import "../header/hero.css"
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
@@ -14,7 +15,7 @@ function Hero() {
             fugit. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             Dolore, temporibus?
           </p>
-          <button className="btn">Let's Order</button>
+         <Link to="/menu"> <button className="btn">Let's Order</button></Link>
         </div>
       </div>
     </>
