@@ -1,4 +1,4 @@
-# FoodApp
+# FoodBookingAI Recipes Generator
 
 <h2>Features</h2>
 <ul>
