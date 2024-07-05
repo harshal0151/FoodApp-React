@@ -35,9 +35,15 @@
 </br>
 <img src="/src/assets/food_screens/cart.png" alt="Recipe Page" />
 <p><em>cart Page</em></p>
+<img src="/src/assets/food_screens/auth.png" alt="Recipe Page" />
+<img src="/src/assets/food_screens/login.png" alt="Recipe Page" />
+<p><em>Autentication Page</em></p>
 </br>
 <img src="/src/assets/food_screens/order.png" alt="Recipe Page" />
 <p><em> sucessfuly Order Page</em></p>
+<img src="/src/assets/food_screens/mobile.png" alt="Recipe Page" />
+<p><em> Mobile view </em></p>
+
 
 
 ## Getting Started
