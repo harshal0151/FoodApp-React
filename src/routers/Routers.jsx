@@ -8,6 +8,7 @@ import Order from '../pages/placeOrder/Order'
 import Menu from '../pages/menu/Menu'
 import SinglePage from '../components/singlei_tem/SinglePage'
 import OrderConfirmation from '../pages/placeOrder/OrderConfirmation'
+import FoodAi from '../components/Ai/FoodAi'
 
 
 
@@ -22,6 +23,7 @@ function Routers() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/placeOrder" element={<Order />} />
         <Route path="/orderConfirmation" element={<OrderConfirmation />} />
+        <Route path="/foodAi" element={<FoodAi />} />
         
     </Routes>
     

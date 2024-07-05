@@ -6,6 +6,7 @@ import { signOut, onAuthStateChanged } from "firebase/auth";
 import "../nav/navbar.css";
 import { auth } from "../../firebase";
 import { StoreContext } from "../../Context/StoreCotext";
+import ai from "../../assets/ai.png"
  
 
 function Navbar({ setShowLogin }) {
@@ -52,8 +53,9 @@ function Navbar({ setShowLogin }) {
       </ul>
 
       <div className="nav_right">
-        <Link>
-          <CiSearch className="icon" />
+        <Link to = "/foodAi" className="aiPng">
+          AI
+          <img src={ai}  />
         </Link>
         <div className="cart">
           <Link to="/cart">

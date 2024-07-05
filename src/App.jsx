@@ -6,6 +6,8 @@ import Navbar  from "./components/nav/Navbar"
 import { useState } from 'react'
 import Login from './components/sign_in/Login'
 
+// aip key = AIzaSyAwjprrVaO4RlkRQWm_7OwUMX-zMTx8AyI
+
 function App() {
   const [showoLgin , setShowLogin] = useState(false)
   return (

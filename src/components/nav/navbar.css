@@ -18,6 +18,18 @@ header .logo img {
   width: 100%;
 }
 
+.aiPng{
+  width: 10px;
+  font-weight: 600;
+  color: #49557e;
+  display: flex;
+  margin-right: 10px;
+}
+.aiPng  img{
+ width: 100%;
+ object-fit: contain;
+}
+
 header ul {
   display: flex;
   gap: 2rem;

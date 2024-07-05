@@ -18,8 +18,8 @@ function OrderConfirmation() {
      
       <div className="order_details">
         <h3>Delivery Information</h3>
-        <p> Name: {formData.firstName + "" + formData.lastName}</p>
-        <p>Address: {formData.street + " " + formData.city}</p>
+        <p><span> Name:</span> {formData.firstName + " " + formData.lastName}</p>
+        <p className="para"><span>Address:</span> {formData.street + " " + formData.city}</p>
 
         <div className="payment_details">
         <h3> Payment</h3>
