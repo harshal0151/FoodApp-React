@@ -4,6 +4,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 const AiwithText = () => {
   const genAI = new GoogleGenerativeAI(
     "AIzaSyAwjprrVaO4RlkRQWm_7OwUMX-zMTx8AyI"
+    // import.meta.env.VITE_AI_KEY
   );
 
   const [search, setSearch] = useState("");

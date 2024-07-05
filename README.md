@@ -1,39 +1,43 @@
 # FoodApp
 
+<h2>Features</h2>
+<ul>
+  <li><strong>User-Friendly Interface</strong>: Intuitive and responsive design for seamless navigation.</li>
+  <li><strong>Healthy Food Suggestions</strong>: Get personalized recipe recommendations powered by Gemini AI.</li>
+  <li><strong>Search Functionality</strong>: Find recipes quickly based on ingredients, cuisine, or dietary restrictions.</li>
+  <li><strong>Favorites</strong>: Save your favorite recipes for easy access.</li>
+  <li><strong>Nutritional Information</strong>: Detailed nutritional breakdown for each recipe.</li>
+  <li><strong>Shopping List</strong>: Generate a shopping list based on selected recipes.</li>
+</ul>
 
-## Overview
-
-FoodApp is a dynamic web application built using React that provides users with healthy food suggestions. Leveraging the power of Gemini AI, this app offers personalized recommendations based on user preferences, ensuring a nutritious and enjoyable culinary experience.
-
-## Features
-
-- **User-Friendly Interface**: Intuitive and responsive design for seamless navigation.
-- **Healthy Food Suggestions**: Get personalized recipe recommendations powered by Gemini AI.
-- **Search Functionality**: Find recipes quickly based on ingredients, cuisine, or dietary restrictions.
-- **Favorites**: Save your favorite recipes for easy access.
-- **Nutritional Information**: Detailed nutritional breakdown for each recipe.
-- **Shopping List**: Generate a shopping list based on selected recipes.
-
-## Technologies Used
-
-- **Frontend**: React, CSS
-- **AI Integration**: Gemini AI for healthy food suggestions
-- **State Management**: Context API
-- **Routing**: React Router
-- **Styling**: Styled Components
+<h2>Technologies Used</h2>
+<ul>
+  <li><strong>Frontend</strong>: React, CSS</li>
+  <li><strong>AI Integration</strong>: Gemini AI for healthy food suggestions</li>
+  <li><strong>State Management</strong>: Context API</li>
+  <li><strong>Routing</strong>: React Router</li>
+  <li><strong>Styling</strong>: Styled Components</li>
+  <li><strong>Authentication</strong>: Firebase</li>
+  <li><strong>Responsive UI</strong>: Fully responsive design according to screen sizes</li>
+</ul>
 
 
 <h2>Screenshots</h2>
-<img src="path/to/homepage-screenshot.png" alt="Home Page" />
+<img src="/src/assets/food_screens/home.png" alt="Home Page" />
 <p><em>Home Page</em></p>
-<img src="path/to/recipepage-screenshot.png" alt="Recipe Page" />
+</br>
+<img src="/src/assets/food_screens/Aipage.png" alt="Recipe Page" />
 <p><em> Healthy food suggestions Page</em></p>
-<img src="path/to/recipepage-screenshot.png" alt="Recipe Page" />
+</br>
+<img src="/src/assets/food_screens/menu.png" alt="Recipe Page" />
+<img src="/src/assets/food_screens/menucards.png" alt="Recipe Page" />
 <p><em>menu Page</em></p>
-<img src="path/to/recipepage-screenshot.png" alt="Recipe Page" />
+</br>
+<img src="/src/assets/food_screens/cart.png" alt="Recipe Page" />
 <p><em>cart Page</em></p>
-<img src="path/to/recipepage-screenshot.png" alt="Recipe Page" />
-<p><em>Order Place Page</em></p>
+</br>
+<img src="/src/assets/food_screens/order.png" alt="Recipe Page" />
+<p><em> sucessfuly Order Page</em></p>
 
 
 ## Getting Started
@@ -70,6 +74,10 @@ Ensure you have the following installed on your machine:
 <p>or</p>
 <pre><code>yarn start</code></pre>
 <p>Open <a href="http://localhost:3000" target="_blank">http://localhost:3000</a> to view the app in your browser.</p>
+
+<h3>Deployment</h3>
+<p>The app is deployed on Vercel. You can view the live version here: <a href="https://your-vercel-app-url.vercel.app" target="_blank">https://your-vercel-app-url.vercel.app</a></p>
+<p>To deploy your own version on Vercel, follow these steps:</p>
 
 <h2>Usage</h2>
 <ol>
