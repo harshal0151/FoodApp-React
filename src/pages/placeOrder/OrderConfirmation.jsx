@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext , useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { StoreContext } from "../../Context/StoreCotext";
 import "../placeOrder/place_order.css";
@@ -12,6 +12,9 @@ function OrderConfirmation() {
   const food = food_list.find((item) => item._id === cartItem._id);
   console.log(food);
 
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (<>
     <h2>Order Confirmation</h2>
     <div className="confirmation_container">

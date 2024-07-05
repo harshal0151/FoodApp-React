@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext , useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { IoMdArrowBack } from "react-icons/io";
 import "../placeOrder/place_order.css";
@@ -36,7 +36,9 @@ function Order() {
       alert("Please log in to proceed to payment.");
     }
   };
-
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <div className="order_container">
       <div className="delivery_info">

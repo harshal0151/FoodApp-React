@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import "../Ai/foodai.css"; 
 import ai from "../../assets/ai.png"
@@ -63,7 +63,9 @@ const AiwithText = () => {
       }
     });
   };
-
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <div className="container">
 
