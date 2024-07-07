@@ -18,7 +18,7 @@ function Routers() {
     <>
     <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/singleItem/:id" element={<SinglePage />} />
+        <Route path="/singleItem/:id" element={<SinglePage />} /> {/*defines a dynamic segment (:id). This means that whatever value is provided after /singleItem/ in the URL will be captured by id.*/}
         <Route path="/menu" element={<Menu />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/placeOrder" element={<Order />} />

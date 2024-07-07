@@ -36,7 +36,7 @@ function Search() {
           filteredFoodList.map(food => (
             <div key={food.id} className="search-result-item">
               <p>{food.name}</p>
-              {/* Add more details or a link to the food item page if needed */}
+        
             </div>
           ))
         ) : (

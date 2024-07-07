@@ -4,6 +4,8 @@ import { IoMdArrowBack } from "react-icons/io";
 import "../placeOrder/place_order.css";
 import money from "../../assets/money.gif";
 import { StoreContext } from "../../Context/StoreCotext";
+import {  toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 function Order() {
   const { cartTotal, user } = useContext(StoreContext);
@@ -33,7 +35,7 @@ function Order() {
       // Navigate to the order confirmation page
       navigate("/orderConfirmation", { state: { formData, cartTotal: cartTotal() } });
     } else {
-      alert("Please log in to proceed to payment.");
+      toast.warn("Please log in to proceed to payment.");
     }
   };
   useEffect(() => {
